@@ -87,10 +87,5 @@ $places = new Place;
     </div>
 </div>
 
-
-
-        <a href="<?php echo myLink('login') ?>" class="btn">Login</a>
-        <a href="<?php echo myLink('register') ?>" class="btn">Register</a>
-
 <?php
 getFooter();

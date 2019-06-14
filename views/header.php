@@ -24,10 +24,10 @@
             <div class="container">
                 <a class="brand-logo" href="/" title="На главную">Project "CONCERT HALL"</a>
                 <ul id="nav-mobile" class="right">
+                    <li><a href="<?php echo myLink('admin')?>">Admin</a></li>
                     <li <?php echo $_SESSION['is_auth'] ? 'id="account_link"' : ''; ?>><a class="account" href="<?php echo myLink('login') ?>"><i class="material-icons">account_circle</i><span><?php echo $_SESSION['is_auth'] ? $_SESSION['is_auth_name'] : 'Вход не выполнен'; ?></span></a>
                         <ul id='dropdown_account_link' class='dropdown-content'>
                             <li><a class="light-blue-text text-darken-4" href="<?php echo myLink('my-account') ?>"><i class="material-icons">account_box</i>Мой аккаунт</a></li>
-                            <li><a class="light-blue-text text-darken-4" href="posts.php"><i class="material-icons">edit</i>Мои записи</a></li>
                             <li><a href="index.php?page=logout" class="light-blue-text text-darken-4"><i class="material-icons">close</i>Выйти из аккаунта</a></li>
                         </ul>
                     </li>

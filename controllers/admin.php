@@ -174,21 +174,7 @@ foreach ($_SESSION['orders_list'] as $item) {
 // Get places numbers
 unset($_SESSION['places_numbers']);
 unset($_SESSION['orders_list_add_places_numbers']);
-/*
-foreach ($_SESSION['orders_list_add_places_quantity'] as $item) {
-    $sql_get_places_numbers = "SELECT place_id FROM order_details WHERE order_id='" . $item['order_id'] . "'";
-    $query_get_places_numbers = mysqli_query($connect, $sql_get_places_numbers);
 
-        while ($res_get_places_numbers[] = mysqli_fetch_assoc($query_get_places_numbers)) {
-            $_SESSION['places_numbers'] = $res_get_places_numbers;
-        }
-    foreach ($_SESSION['places_numbers'] as $number) {
-        $item['places_numbers'][] = $number;
-    }
-    unset($res_get_places_numbers);
-    $_SESSION['orders_list_add_places_numbers'][] = $item;
-}
-*/
 foreach ($_SESSION['orders_list_add_places_quantity'] as $item) {
     $sql_get_places_numbers = "SELECT place_id, place_name, zone_name FROM order_details LEFT JOIN places USING (place_id) LEFT JOIN zones USING (zone_id) WHERE order_id='" . $item['order_id'] . "'";
     $query_get_places_numbers = mysqli_query($connect, $sql_get_places_numbers);
@@ -221,14 +207,6 @@ if (!empty($_POST)) {
     
     }
 }
-echo '<pre>';
-var_dump($_POST);
-echo '</pre>';
-echo '<pre>';
-var_dump($_SESSION['orders_list_add_places_numbers']);
-echo '</pre>';
-
-
 
 
 getView('admin');
