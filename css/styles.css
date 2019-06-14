@@ -1,0 +1,317 @@
+.main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.m-auto {
+    margin: auto !important;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.hidden {
+    display: none !important;
+}
+/*===== HEADER START =====*/
+nav li#account_link {
+    position: relative;
+}
+nav li .account {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dropdown-content {
+    position: absolute;
+}
+nav li#account_link:hover #dropdown_account_link.dropdown-content {
+    display: block !important;
+    opacity: 1;
+    top: 100%;
+    left: initial;
+    right: 0;
+    width: 220px;
+}
+/*===== HEADER END =====*/
+/*===== MAIN START =====*/
+.main {
+    height: 100vh;
+}
+
+/*===== MAIN END =====*/
+/*===== FORM START =====*/
+form.card {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+label {
+    display: block;
+}
+input, select, textarea {
+    border-width: 1px;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+input[type='radio'] {
+    width: initial;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+}
+input[type='email'] {
+}
+
+select {
+    border-left-style: inset;
+    border-top-style: inset;
+    border-right-style: none;
+    border-bottom-style: none;
+    line-height: 1;
+}
+textarea {
+    resize: vertical;
+}
+.error {
+    color: red;
+    border-color: red;
+}
+.success {
+    color: green;
+    border-color: green;
+}
+/* Style Placeholders */
+.my-account ::-webkit-input-placeholder {
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+}
+.my-account ::-moz-placeholder {
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+}
+.my-account :-ms-input-placeholder {
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+}
+.my-account ::placeholder {
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+}
+/*===== FORM END =====*/
+.pagination-wrapper a {
+    margin-right: 10px;
+}
+/*===== MAIN SCHEME START =====*/
+.container {
+    position: relative;
+}
+.hall-scheme form {
+    max-width: 100%;
+}
+.hall-scheme .card-panel {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hall-scheme .zone-title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #01579b;
+}
+#cart-info .cart-title {
+    padding: 10px;
+    color: #fff;
+    border-radius: 2px;
+}
+#cart-info .cart-item {
+    padding: 5px;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #01579b;
+    margin-bottom: 5px;
+}
+#cart-info .cart-item span {
+    display: block;
+}
+#cart-info .cart-item .item-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+}
+#cart-actions span {
+    display: block;
+    padding: 5px 0;
+}
+#cart-actions button {
+    width: 100%;
+}
+.errors-wrapper {
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    text-align: center;
+    background-color: #ff9494;
+    padding: 10px;
+    border-radius: 2px;
+}
+/* Customize the label (the container) */
+.place {
+    display: inline-block;
+    position: relative;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 30px;
+    height: 30px;
+}
+
+/* Hide the browser's default checkbox */
+.place input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #FFC107;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/* On mouse-over, add a grey background color */
+.place:hover input ~ .checkmark {
+    background-color: #ffa000;
+}
+
+/* When the checkbox is checked, add a blue background */
+.place input:checked ~ .checkmark {
+    background-color: #4caf50;
+    color: #4caf50;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.place input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.place .checkmark:after {
+    left: 11px;
+    top: 4px;
+    width: 10px;
+    height: 17px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.place input:disabled ~ .checkmark {
+    background-color: #757575;
+}
+.place .place-data {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    width: 115px;
+    height: 50px;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.place .place-data span {
+    display: block;
+}
+.place:hover .place-data {
+    display: block;
+}
+/*===== MAIN SCHEME FINISH =====*/
+/*===== FOOTER START =====*/
+footer.page-footer {
+    padding-top: 10px;
+}
+footer .row {
+    margin-bottom: 10px;
+}
+/*===== FOOTER END =====*/
+/* ===== ADMIN START ===== */
+.orders-list-wrapper {
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+}
+.order-item {
+    padding: 5px;
+}
+.order-item .row {
+    margin: 0;
+}
+.order-item .row form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.order-item .row form input[type="text"] {
+    display: none;
+}
+.order-item .row form .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-item .row form .actions button {
+    border: none;
+    background: none;
+}
+.order-item span {
+    display: block;
+}
+/* ===== ADMIN END ===== */

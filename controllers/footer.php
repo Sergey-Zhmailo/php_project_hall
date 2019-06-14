@@ -1,0 +1,2 @@
+<?php
+getView('footer');
